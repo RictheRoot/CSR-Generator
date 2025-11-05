@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import os
 import platform
@@ -10,7 +10,7 @@ import time
 from splunklib.searchcommands import Configuration, GeneratingCommand, Option, dispatch
 
 
-@Configuration()
+@Configuration(local=True, distributed=False)
 class gencsrCommand(GeneratingCommand):
     common_name = Option(require=True)
     country = Option(require=False, default="US")

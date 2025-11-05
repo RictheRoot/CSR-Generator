@@ -17,7 +17,8 @@ The app leverages the OpenSSL binary bundled with Splunk (`splunk cmd openssl`) 
 | 2024-10-04 | 0.0.1   | Initial release                                                       |
 | 2024-10-12 | 0.0.2   | Added `subjectAltName` support, improved input handling, bug fixes    |
 | 2025-05-21 | 0.1.0   | Major UI/UX redesign, improved CSR engine, full Windows/Linux support |
-| 2025-06-18 | 0.1.1   | Minor Fixes                                                           |
+| 2025-06-18 | 0.1.1   | Minor fixes                                                           |
+| 2025-11-05 | 0.1.2   | Locked command execution to search heads to satisfy cloud vetting     |
 
 ---
 
@@ -55,6 +56,11 @@ The app leverages the OpenSSL binary bundled with Splunk (`splunk cmd openssl`) 
 
 ---
 
+## New in Version 0.1.2
+
+- Enforced search head-only execution for the custom search command to satisfy the updated Splunk Cloud vetting policy.
+---
+
 ## New in Version 0.1.0
 
 - UI rebuilt using modular SimpleXML layout with custom JS/CSS separation and explicit grid logic.
@@ -77,4 +83,3 @@ The app leverages the OpenSSL binary bundled with Splunk (`splunk cmd openssl`) 
 - Feel free to contribute or Fork via [https://github.com/aleeric/CSR-Generator-for-Splunk](https://github.com/aleeric/CSR-Generator-for-Splunk)
 
 - Rate App on Splunkbase via https://splunkbase.splunk.com/app/7567
-
